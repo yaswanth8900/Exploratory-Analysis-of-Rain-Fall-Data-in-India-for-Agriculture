@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result: Rain Expected</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-blue-50 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white p-6 md:p-10 rounded-2xl shadow-2xl max-w-xl w-full border-t-8 border-blue-600">
+        
+        <div class="flex flex-col items-center mb-8">
+            <!-- Icon/Visual Header -->
+            <div class="text-7xl mb-4 text-blue-600">
+                🌧️
+            </div>
+            <h1 class="text-3xl font-bold text-gray-800">
+                Rainfall Expected!
+            </h1>
+            <p class="text-green-600 font-semibold mt-1">Prediction Success</p>
+        </div>
+
+        <!-- Probability Section (Mimics Dashboard Card) -->
+        <div class="bg-blue-50 p-6 rounded-xl border border-blue-200 mb-8 shadow-inner">
+            <p class="text-sm font-medium text-gray-600 uppercase tracking-wider mb-2">
+                Calculated Probability of Rain Tomorrow:
+            </p>
+            <div class="text-7xl font-extrabold text-blue-600">
+                {{ probability }}
+            </div>
+        </div>
+
+        <!-- Agricultural Advice Section -->
+        <div class="bg-green-50 p-6 rounded-xl border border-green-300 shadow-md">
+            <h2 class="text-xl font-bold text-green-700 mb-4 flex items-center">
+                <span class="mr-2">💡</span> Agricultural Advisory
+            </h2>
+            <ul class="text-gray-700 space-y-3 list-disc list-inside">
+                <li><strong>Irrigation:</strong> **Immediately reduce or postpone** scheduled irrigation.</li>
+                <li><strong>Pest/Fertilizer:</strong> Avoid spraying; rain will wash chemicals away, leading to resource loss.</li>
+                <li><strong>Harvesting:</strong> Delay harvesting until after the rain subsides to prevent spoilage and difficult muddy work.</li>
+                <li><strong>Soil Health:</strong> Check drainage outlets to prevent **waterlogging** in fields.</li>
+            </ul>
+        </div>
+        
+        <div class="mt-8 text-center">
+            <a href="/" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-lg">
+                Run Another Prediction
+            </a>
+        </div>
+    </div>
+</body>
+</html>

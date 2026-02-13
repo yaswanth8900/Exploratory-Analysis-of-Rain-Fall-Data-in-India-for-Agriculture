@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rainfall Prediction for Agriculture</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
+        .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); max-width: 600px; margin: auto; }
+        h1 { text-align: center; color: #38761d; }
+        form { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        label { font-weight: bold; }
+        input[type="text"], input[type="number"], select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { grid-column: 1 / 3; padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #45a049; }
+        .hidden-fields { display: none; } /* Use CSS to hide less important inputs */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Predict Rain Tomorrow 🌧️</h1>
+        <p>Enter today's weather conditions to predict if it will rain tomorrow.</p>
+        
+        <form action="/" method="post">
+            
+            <label for="Location">Location (e.g., Delhi, Uluru):</label>
+            <input type="text" id="Location" name="Location" value="Delhi" required>
+
+            <label for="MinTemp">Min Temp (°C):</label>
+            <input type="number" step="0.1" id="MinTemp" name="MinTemp" value="15.0" required>
+
+            <label for="MaxTemp">Max Temp (°C):</label>
+            <input type="number" step="0.1" id="MaxTemp" name="MaxTemp" value="25.0" required>
+
+            <label for="Rainfall">Rainfall (mm):</label>
+            <input type="number" step="0.1" id="Rainfall" name="Rainfall" value="0.0" required>
+            
+            <label for="Humidity3pm">Humidity at 3pm (%):</label>
+            <input type="number" id="Humidity3pm" name="Humidity3pm" value="30" required>
+            
+            <label for="Pressure3pm">Pressure at 3pm (hPa):</label>
+            <input type="number" step="0.1" id="Pressure3pm" name="Pressure3pm" value="1010.0" required>
+            
+            <label for="WindGustSpeed">Wind Gust Speed (km/h):</label>
+            <input type="number" id="WindGustSpeed" name="WindGustSpeed" value="20" required>
+
+            <label for="RainToday">Rain Today:</label>
+            <select id="RainToday" name="RainToday" required>
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+            </select>
+            
+            <label for="Day">Day of Month:</label>
+            <input type="number" id="Day" name="Day" value="1" min="1" max="31" required>
+
+            <label for="Month">Month (1-12):</label>
+            <input type="number" id="Month" name="Month" value="1" min="1" max="12" required>
+
+            <div class="hidden-fields">
+                <input type="hidden" name="Evaporation" value="5.0">
+                <input type="hidden" name="Sunshine" value="8.0">
+                <input type="hidden" name="WindGustDir" value="W">
+                <input type="hidden" name="WindDir9am" value="NNW">
+                <input type="hidden" name="WindDir3pm" value="WSW">
+                <input type="hidden" name="WindSpeed9am" value="10">
+                <input type="hidden" name="WindSpeed3pm" value="15">
+                <input type="hidden" name="Humidity9am" value="60">
+                <input type="hidden" name="Pressure9am" value="1015.0">
+                <input type="hidden" name="Cloud9am" value="5">
+                <input type="hidden" name="Cloud3pm" value="5">
+                <input type="hidden" name="Temp9am" value="18.0">
+                <input type="hidden" name="Temp3pm" value="23.0">
+            </div>
+
+            <button type="submit">Predict Rain Tomorrow</button>
+        </form>
+    </div>
+</body>
+</html>

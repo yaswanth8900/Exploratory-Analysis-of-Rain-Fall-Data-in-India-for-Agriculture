@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result: No Rain</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-yellow-50 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white p-6 md:p-10 rounded-2xl shadow-2xl max-w-xl w-full border-t-8 border-red-500">
+        
+        <div class="flex flex-col items-center mb-8">
+            <!-- Icon/Visual Header -->
+            <div class="text-7xl mb-4 text-red-500">
+                ☀️
+            </div>
+            <h1 class="text-3xl font-bold text-gray-800">
+                No Significant Rainfall Expected
+            </h1>
+            <p class="text-yellow-600 font-semibold mt-1">Dry Conditions Predicted</p>
+        </div>
+
+        <!-- Information Section (Mimics Dashboard Card) -->
+        <div class="bg-red-50 p-6 rounded-xl border border-red-200 mb-8 shadow-inner">
+            <p class="text-lg font-semibold text-gray-700">
+                The model predicts dry weather. Focus shifts to proactive water management.
+            </p>
+            {% if message %}
+            <p class="text-sm text-red-700 font-medium mt-3">System Error: {{ message }}</p>
+            {% endif %}
+        </div>
+
+        <!-- Agricultural Advice Section -->
+        <div class="bg-yellow-50 p-6 rounded-xl border border-yellow-300 shadow-md">
+            <h2 class="text-xl font-bold text-yellow-700 mb-4 flex items-center">
+                <span class="mr-2">💧</span> Agricultural Action Plan
+            </h2>
+            <ul class="text-gray-700 space-y-3 list-disc list-inside">
+                <li><strong>Irrigation:</strong> **High Priority**—Schedule primary watering cycles immediately.</li>
+                <li><strong>Pest/Fertilizer:</strong> Ideal time for application as no rainfall will interfere.</li>
+                <li><strong>Field Work:</strong> Proceed with tilling, planting, and heavy machinery use on dry, workable soil.</li>
+                <li><strong>Moisture Monitoring:</strong> Continuously monitor soil moisture levels to prevent plant stress.</li>
+            </ul>
+        </div>
+        
+        <div class="mt-8 text-center">
+            <a href="/" class="inline-block bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-lg">
+                Try Another Prediction
+            </a>
+        </div>
+    </div>
+</body>
+</html>
