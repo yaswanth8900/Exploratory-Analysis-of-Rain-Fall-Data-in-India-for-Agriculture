@@ -45,11 +45,12 @@ Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
+---
 
-##📊 Example Visualizations
-• 	**Rainfall distribution across states.
-• 	**Seasonal rainfall trends (monsoon vs. non-monsoon).
-• 	**Correlation between rainfall and agricultural yield.
+📊 Example Visualizations
+- Rainfall distribution across states.
+- Seasonal rainfall trends (monsoon vs. non-monsoon).
+- Correlation between rainfall and agricultural yield.
 
 ---
 
