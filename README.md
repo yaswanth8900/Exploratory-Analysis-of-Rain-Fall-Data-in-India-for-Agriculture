@@ -53,16 +53,16 @@ pip install -r requirements.txt
 
 ---
 
-##🌱 Applications
-• 	**Agricultural planning and crop selection.
-• 	**Drought and flood risk assessment.
-• 	**Policy-making for water resource management.
+🌱 Applications
+• 	Agricultural planning and crop selection.
+• 	Drought and flood risk assessment.
+• 	Policy-making for water resource management.
 
 ---
 
-##🤝 Contributing
+🤝 Contributing
 #Contributions are welcome!
-• 	**Fork the repo
-• 	**Create a new branch ()
-• 	**Commit changes
-• 	**Submit a pull request
+• 	Fork the repo
+• 	Create a new branch (new-branch)
+• 	Commit changes
+• 	Submit a pull request
